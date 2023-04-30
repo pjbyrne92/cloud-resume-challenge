@@ -72,7 +72,7 @@
 
 const counter = document.querySelector("counter-number");
 async function updateCounter() {
-  let response = await fetch("https://ypjdbhw57wc7pn63tkgplnmcaa0kyvpe.lambda-url.eu-west-1.on.aws/");
+  let response = await fetch("https://tz7epthvo4g3nqg6hv4elo2p2i0nuoar.lambda-url.eu-west-1.on.aws/ ");
   let data = await response.json();
   counter.innerHTML = 'views: ${data}';
 }

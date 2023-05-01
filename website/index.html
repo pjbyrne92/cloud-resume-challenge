@@ -6,24 +6,15 @@
     <link rel="stylesheet" href="src/css/style.css">
     <script src="https://kit.fontawesome.com/eb9e99724e.js" crossorigin="anonymous"></script>
     <script>
-  // Define the Lambda function endpoint URL
-  const lambdaEndpointUrl = 'https://tz7epthvo4g3nqg6hv4elo2p2i0nuoar.lambda-url.eu-west-1.on.aws/';
-
-  // Define the HTML div that will display the visitor count
-  const visitorCountDiv = document.getElementById('visitor-count');
-
-  // Make a request to the Lambda function to get the visitor count
-  fetch(lambdaEndpointUrl)
-    .then(response => response.text())
-    .then(count => {
-      // Update the HTML div with the visitor count
-      visitorCountDiv.textContent = `Visitor count: ${count}`;
-    })
-    .catch(error => {
-      // Handle any errors that occur during the request
-      console.error('Failed to retrieve visitor count:', error);
-      visitorCountDiv.textContent = 'Failed to retrieve visitor count';
-    });</script>
+  const counter = document.querySelector(".counter-number");
+async function updateCounter() {
+    let response = await fetch(
+        "https://tz7epthvo4g3nqg6hv4elo2p2i0nuoar.lambda-url.eu-west-1.on.aws/"
+    );
+    let data = await response.json();
+    counter.innerHTML = `👀 Views: ${data}`;
+}
+updateCounter(); </script>
 </head>
 
 <body>
@@ -39,8 +30,8 @@
                 <div class="info">
                     <h1 class="name">PJ Byrne</h1>
                     <h2 class="job">Data Center Logistics Systems Specialist</h2>
+                    <div class="counter-number">Couldn't read the counter</div>
                 </div>
-<div id="visitor-count">Loading visitor count...</div>
             </div>
             <div class="about"
                  

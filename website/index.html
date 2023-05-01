@@ -5,21 +5,7 @@
     <title>My Cloud Resume</title>
     <link rel="stylesheet" href="src/css/style.css">
     <script src="https://kit.fontawesome.com/eb9e99724e.js" crossorigin="anonymous"></script>
-<script>
-// Define the Lambda function URL
-const lambdaUrl = "https://tz7epthvo4g3nqg6hv4elo2p2i0nuoar.lambda-url.eu-west-1.on.aws/";
 
-// Fetch the visitor count from the Lambda function and update the HTML
-fetch(lambdaUrl)
-  .then(response => response.json())
-  .then(data => {
-    const visitorCounter = document.getElementById("visitor-counter");
-    visitorCounter.innerHTML = `Total visitors: ${data.visitorCount}`;
-  })
-  .catch(error => {
-    console.error(error);
-  });
-</script>
 
 </head>
 

@@ -5,6 +5,26 @@
     <title>My Resume</title>
     <link rel="stylesheet" href="src/css/style.css">
     <script src="https://kit.fontawesome.com/eb9e99724e.js" crossorigin="anonymous"></script>
+    <script>
+  // Define the Lambda function endpoint URL
+  const lambdaEndpointUrl = 'https://tz7epthvo4g3nqg6hv4elo2p2i0nuoar.lambda-url.eu-west-1.on.aws/';
+
+  // Define the HTML div that will display the visitor count
+  const visitorCountDiv = document.getElementById('visitor-count');
+
+  // Make a request to the Lambda function to get the visitor count
+  fetch(lambdaEndpointUrl)
+    .then(response => response.text())
+    .then(count => {
+      // Update the HTML div with the visitor count
+      visitorCountDiv.textContent = `Visitor count: ${count}`;
+    })
+    .catch(error => {
+      // Handle any errors that occur during the request
+      console.error('Failed to retrieve visitor count:', error);
+      visitorCountDiv.textContent = 'Failed to retrieve visitor count';
+    });
+    </script>
 
 </head>
 
@@ -117,7 +137,6 @@
                 </div>
             </div>
         </div>
-    <script src="src/js/index.js"></script>
 </body>
 
 </html>

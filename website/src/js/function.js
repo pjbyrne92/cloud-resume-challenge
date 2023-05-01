@@ -78,7 +78,7 @@ const lambdaFunctionName = "cloud-resume-challenge-api";
   xhr.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       // Update the visitor count on the page
-      document.getElementById("visitorCount").textContent = this.responseText;
+      document.getElementById("visitor-count").textContent = this.responseText;
     }
   };
   xhr.open("POST", "https://tz7epthvo4g3nqg6hv4elo2p2i0nuoar.lambda-url.eu-west-1.on.aws/" + cloud-resume-challenge-api);

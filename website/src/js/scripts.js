@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
   // Define the Lambda function endpoint URL
-  const lambdaEndpointUrl = 'https://tz7epthvo4g3nqg6hv4elo2p2i0nuoar.lambda-url.eu-west-1.on.aws/';
+  const lambdaEndpointUrl = 'https://eucf7ckytmltifhybaimn67kwm0ydhjb.lambda-url.eu-west-1.on.aws/';
 
   // Define the HTML div that will display the visitor count
   const visitorCountDiv = document.getElementById('visitor-count');

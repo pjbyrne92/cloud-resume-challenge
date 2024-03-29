@@ -43,7 +43,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   /*NavBarColor*/
-  --bs-primary-rgb: 29, 64, 104;
+  --bs-primary-rgb: 0,0,0;
 
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -64,7 +64,8 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #4eb5ba;
+  /*Main Body Clor*/
+  --bs-body-bg: #0dcaf0;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
